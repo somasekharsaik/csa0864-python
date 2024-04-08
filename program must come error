@@ -1,0 +1,6 @@
+a="PYTHON"
+a[0]="x"
+B="GOOD"
+B="y"
+c="string"
+del(a)
