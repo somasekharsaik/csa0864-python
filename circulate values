@@ -1,0 +1,10 @@
+def circulate_values(lst, n):
+    n = n % len(lst)  # Ensure n is within the list length
+    return lst[-n:] + lst[:-n]
+
+# Example usage:
+values = [1, 2, 3, 4, 5]
+n = 2
+circulated_values = circulate_values(values, n)
+print("Original list:", values)
+print("Circulated list:", circulated_values)
