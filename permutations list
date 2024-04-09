@@ -1,0 +1,15 @@
+my_list = [1, 2, 3]
+def permutations(lst):
+    if len(lst) == 0:
+        return [[]]
+    else:
+        perms = []
+        for i in range(len(lst)):
+            element = lst[i]
+            remaining_elements = lst[:i] + lst[i+1:]
+            for perm in permutations(remaining_elements):
+                perms.append([element] + perm)
+        return perms
+perm = permutations(my_list)
+for p in perm:
+    print(p)
